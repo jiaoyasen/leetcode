@@ -29,5 +29,13 @@ print("The running time of 2 is ",(time2-time1))
 print(result)
 
 
+result = {}
+time1 = time.clock()
+for i in data:
+    result[i] = result.setdefault(i,0) + 1
+time2 = time.clock()
+print("The running time of 2 is ",(time2-time1))
+print(result)
+
 # result_sorted = sorted(result.items(), key = operator.itemgetter(0))
 # print(result_sorted)
